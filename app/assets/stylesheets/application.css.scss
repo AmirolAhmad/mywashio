@@ -61,6 +61,63 @@
 	font-style: normal;
 }
 
+$linkcolour: rgb(241, 81, 86);
+
 body {
+	background: none repeat scroll 0 0 #FFFFFF;
 	font-family: 'ProximaNovaRegular', arial, helvetica, sans-serif;
+}
+
+.navbar{
+	border: 0;
+	border-radius: 0;
+}
+
+.navbar-default {
+	background-color: $linkcolour;
+	// border-color: #000;
+	border-bottom: 4px #FF8C42 solid;
+}
+
+.navbar-default .navbar-brand {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #ffffff;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: darken($linkcolour, 5%);
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	background-color: darken($linkcolour, 5%);
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	background-color: darken($linkcolour, 5%);
+	color: #ffffff;
+}
+
+.btn {
+	padding: 12px 18px;
+	transition: all 0.3s ease 0s;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+	padding: 15px 22px;
 }
