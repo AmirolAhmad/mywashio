@@ -8,8 +8,11 @@ gem 'mysql2'
 # JSON APIs
 gem 'jbuilder', '~> 2.0'
 
+# User Authentication
+gem 'devise'
+
 # Environment Setup
-gem "rails_config"
+gem 'rails_config'
 
 # Assets Pipeline
 gem 'bootstrap-sass', '~> 3.3.1'
@@ -30,8 +33,8 @@ group :development do
 	gem 'spring'
 	gem 'letter_opener'
 	gem 'quiet_assets'
-	gem "better_errors"
-	gem "binding_of_caller"
+	gem 'better_errors'
+	gem 'binding_of_caller'
 end
 
 group :development, :test do
