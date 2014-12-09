@@ -1,3 +1,20 @@
+<% content_for :title do %>
+  MyWashio
+<% end %>
+
+<% content_for :meta_tags do %>
+  <%= render :partial => 'application/meta_tags',
+             :locals => {
+               :type => "website",
+               :title => "MyWashio",
+               :url => request.url,
+               :description => "Dry cleaning & laundry delivered to your door",
+               :canonical => request.url,
+               :og_title => "MyWashio",
+               :og_description => "Dry cleaning & laundry delivered to your door"
+            } %>
+<% end %>
+
 <div class="page-header">
   <h1>Pages#index <small>Find me in app/views/pages/index.html.erb</small></h1>
 </div>
