@@ -8,14 +8,12 @@
       <div class="login-form">
 
         <div class="form-group">
-          <%= f.label :login, "Username or Email address" %>
-          <%= f.text_field :login, autofocus: true, class: "form-control" %>
+          <%= f.text_field :login, autofocus: true, class: "form-control input-lg input-washio", placeholder: "Username or email address" %>
         </div>
 
         <div class="form-group">
-          <%= f.label :password %><%= link_to "Forgot password?", new_user_password_path, :class => "small pull-right" %>
-          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-          
+          <%= f.password_field :password, autocomplete: "off", class: "form-control input-lg input-washio", placeholder: "Password" %>
+          <%= link_to "Forgot password?", new_user_password_path, :class => "small pull-right" %>
         </div>
 
         <% if devise_mapping.rememberable? -%>

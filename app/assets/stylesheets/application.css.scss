@@ -136,3 +136,20 @@ body {
 	border-radius: 0 0 6px 6px;
 	border: 1px solid #e7e7e7;
 }
+
+.input-washio {
+	border: 0;
+	border-bottom: 1px #999999 dotted;
+	border-radius: 0;
+	box-shadow: inset 0 0 0;
+	padding: 6px 0;
+}
+
+.input-washio:focus {
+	border-color: 0;
+	box-shadow: inset 0 0 0;
+}
+
+input .input-washio {
+	border: 0;
+}
