@@ -36,7 +36,11 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
+  has_one :profile
+  accepts_nested_attributes_for :profile, update_only: true
+
   validates :username, :uniqueness => { :case_sensitive => false }, format: { with: /\A[-\w.]*\z/ }
+  validates_associated :profile
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

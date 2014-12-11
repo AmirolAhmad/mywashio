@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209133432) do
+ActiveRecord::Schema.define(version: 20141211034137) do
+
+  create_table "profiles", force: true do |t|
+    t.string   "full_name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "postcode"
+    t.string   "state"
+    t.string   "country"
+    t.string   "phone_number"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",               default: "", null: false
