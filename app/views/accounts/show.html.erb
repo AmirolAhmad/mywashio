@@ -1,1 +1,10 @@
-<%= @user.profile.try(:full_name) %>
+Name: <strong><%= @user.profile.try(:full_name) %></strong><br />
+Address 1: <strong><%= @user.profile.try(:address1) %></strong><br />
+Address 2: <strong><%= @user.profile.try(:address2) %></strong><br />
+City: <strong><%= @user.profile.try(:city) %></strong><br />
+Postcode: <strong><%= @user.profile.try(:postcode) %></strong><br />
+State: <strong><%= @user.profile.try(:state) %></strong><br />
+Country: <strong><%= @user.profile.try(:country) %></strong><br />
+Phone Number: <strong><%= @user.profile.try(:phone_number) %></strong><br />
+
+<%= link_to "Edit", edit_account_path %>

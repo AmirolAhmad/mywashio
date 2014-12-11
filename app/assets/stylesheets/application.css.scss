@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "sweet-alert";
 
 @font-face {
 	font-family: 'ProximaNovaRegular';
@@ -176,4 +177,6 @@ input .input-washio {
 .col-login-form {
 	margin-top: 80px;
 }
+
+// Sweet Alert
 
