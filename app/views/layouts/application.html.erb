@@ -16,30 +16,34 @@
 </head>
 <body class="<%= body_class %>" data-user="<%= h current_user.try(:to_json) %>">
 
-	<%= render partial: "header" %>
-
-	<div class="container">
-	
-		<% if alert %>
-			<div class="alert alert-danger alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert">
-					<span aria-hidden="true">&times;</span>
-					<span class="sr-only">Close</span>
-				</button>
-				<%= alert %>
-			</div>
-		<% elsif notice %>
-			<div class="alert alert-warning alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert">
-					<span aria-hidden="true">&times;</span>
-					<span class="sr-only">Close</span>
-				</button>
-				<%= notice %>
-			</div>
-		<% end %>
-
-		<%= yield %>
-
+	<div class="main-section">
+		<div class="sidebar">
+			<%= render partial: "sidebar" %>
+		</div>
+		<div class="content">
+			<%= render partial: "header" %>
+				<div class="container-fluid">
+					<% if alert %>
+						<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert">
+								<span aria-hidden="true">&times;</span>
+								<span class="sr-only">Close</span>
+							</button>
+							<%= alert %>
+						</div>
+					<% elsif notice %>
+						<div class="alert alert-warning alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert">
+								<span aria-hidden="true">&times;</span>
+								<span class="sr-only">Close</span>
+							</button>
+							<%= notice %>
+						</div>
+					<% end %>
+					
+					<%= yield %>
+				</div>
+		</div>
 	</div>
 
 </body>

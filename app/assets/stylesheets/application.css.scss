@@ -64,6 +64,8 @@
 
 $linkcolour: rgb(241, 81, 86);
 $btnwashio: #157A6E;
+$logo: #ffffff;
+$sidebarbg: #2F2D2E;
 
 body {
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -180,3 +182,60 @@ input .input-washio {
 
 // Sweet Alert
 
+.container-fluid > .navbar-collapse {
+	margin-left: -15px;
+}
+
+// Sidebar & Main Content
+.main-content {
+	max-width: 100%;
+}
+
+.sidebar {
+	float:left;
+	background-color: $sidebarbg;
+	width: 15%;
+	height: 100%;
+	// padding: 0 10px;
+	position: fixed;
+
+}
+
+.sidebar .new-ad {
+	margin: 0 10px;
+}
+
+.sidebar .logo {
+	padding: 10px 0;
+	text-align: center;
+}
+
+.sidebar a.logo {
+	color: $logo;
+	font-size: 26px;
+	font-style: italic;
+}
+
+.sidebar a.logo:hover {
+	color: darken($logo, 30%);
+	text-decoration: none;
+}
+
+.nav-menu {
+	margin: 10px 0;
+}
+
+.nav-menu li > a {
+	color: #9B9B9B;
+	font-size: 16px;
+}
+
+.nav-menu li > a:hover {
+	background-color: darken($sidebarbg, 5%);
+	color: #ffffff;
+}
+
+.content {
+	float: right;
+	width: 85%;
+}
