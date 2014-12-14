@@ -216,7 +216,9 @@ input .input-washio {
 	font-style: italic;
 }
 
-.sidebar a.logo:hover {
+.sidebar a.logo:hover,
+.sidebar a.logo:active,
+.sidebar a.logo:focus {
 	color: darken($logo, 30%);
 	text-decoration: none;
 }
@@ -227,10 +229,12 @@ input .input-washio {
 
 .nav-menu li > a {
 	color: #9B9B9B;
-	font-size: 16px;
+	font-size: 14px;
 }
 
-.nav-menu li > a:hover {
+.nav-menu li > a:hover,
+.nav-menu li > a:active,
+.nav-menu li > a:focus {
 	background-color: darken($sidebarbg, 5%);
 	color: #ffffff;
 }
