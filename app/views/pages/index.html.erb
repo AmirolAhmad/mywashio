@@ -20,7 +20,7 @@
     <%= link_to c.name, category_index_path(sort: c.slug), class: '' %>
   </li>
 <% end %>
-
+<hr>
 <% @ads.each do |ad| %>
-  <%= ad.title %>
+  <%= link_to ad.title, category_show_path(ad, sort: ad.category.slug) %>
 <% end %>

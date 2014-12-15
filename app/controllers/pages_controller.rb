@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   		flash.now[:notice] = "No ads found for '#{params[:sort]}'." if !params[:sort].blank?
   	end
   end
+
+  def show
+    @ad = Ad.find(params[:id])
+  end
 end
