@@ -37,6 +37,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_one :profile
+  has_many :ads
   accepts_nested_attributes_for :profile, update_only: true
 
   validates :username, :uniqueness => { :case_sensitive => false }, format: { with: /\A[-\w.]*\z/ }

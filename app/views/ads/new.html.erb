@@ -21,23 +21,16 @@
   </div>
   <div class="panel-body">
     <div class="row">
-      <form class="form-horizontal" role="form">
+      <%= form_for @ad, :html => {:multipart => true, method: :post, class: "form-horizontal"} do |f| %>
         <div class="col-md-6">
           <div class="page-header page-header-form">
             <h3>Type</h3>
           </div>
           <!-- Category -->
           <div class="form-group">
-            <label class="col-sm-2 control-label control-label-form">Category</label>
+            <%= f.label :category_id, class: "col-sm-2 control-label control-label-form" %>
             <div class="col-sm-10">
-              <select class="form-control">
-                <option>Apartments</option>
-                <option>Houses</option>
-                <option>Commercial Properties</option>
-                <option>Land</option>
-                <option>Rooms</option>
-                <option>New Properties</option>
-              </select>
+              <%= f.collection_select :category_id, Category.order(:name), :id, :name, {}, :class => "form-control" %>
               <label class="radio-inline">
                 <input type="radio" name="type" id="forSale" value="sale"> For sale
               </label>
@@ -48,35 +41,27 @@
           </div>
           <!-- Type -->
           <div class="form-group">
-            <label class="col-sm-2 control-label control-label-form">Type</label>
+            <%= f.label :type_id, class: "col-sm-2 control-label control-label-form" %>
             <div class="col-sm-10">
-              <select class="form-control">
-                <option>Condo / Services residence / Penthouse / Townhouse</option>
-                <option>Apartment / Flat</option>
-                <option>Others</option>
-              </select>
+              <%= f.grouped_collection_select :type_id, Category.order(:name), :types, :name, :id, :name, {}, :class => "form-control" %>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <!-- Bedrooms -->
               <div class="form-group">
-                <label class="col-sm-4 control-label control-label-form">Bedrooms</label>
+                <%= f.label :bedrooms, class: "col-sm-4 control-label control-label-form" %>
                 <div class="col-sm-8">
-                  <select class="form-control">
-                    <option>Bedrooms</option>
-                  </select>
+                  <%= f.select(:bedrooms, options_for_select([['Bedrooms', ''], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['More than 10', '11']], 'Bedrooms'), {}, {:class => "form-control"}) %>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <!-- Bathrooms -->
               <div class="form-group">
-                <label class="col-sm-4 control-label control-label-form">Bathrooms</label>
+                <%= f.label :bathrooms, class: "col-sm-4 control-label control-label-form" %>
                 <div class="col-sm-8">
-                  <select class="form-control">
-                    <option>Bathrooms</option>
-                  </select>
+                  <%= f.select(:bathrooms, options_for_select([['Bathrooms', ''], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['More than 10', '11']], 'Bathrooms'), {}, {:class => "form-control"}) %>
                 </div>
               </div>
             </div>
@@ -85,10 +70,10 @@
             <div class="col-md-6">
               <!-- Size -->
               <div class="form-group">
-                <label class="col-sm-4 control-label control-label-form">Size</label>
+                <%= f.label :size, class: "col-sm-4 control-label control-label-form" %>
                 <div class="col-sm-8">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Size">
+                    <%= f.text_field :size, :class => "form-control", placeholder: "Size" %>
                     <span class="input-group-addon">sq.ft.</span>
                   </div>
                 </div>
@@ -147,16 +132,16 @@
           </div>
           <!-- Ad Title -->
           <div class="form-group">
-            <label class="col-sm-2 control-label control-label-form">Ad Title</label>
+            <%= f.label :title, class: "col-sm-2 control-label control-label-form" %>
             <div class="col-sm-10">
-              <input type="text" class="form-control" placeholder="Ad Title">
+              <%= f.text_field :title, :class => "form-control", placeholder: "Ad Title" %>
             </div>
           </div>
           <!-- Ad Description -->
           <div class="form-group">
-            <label class="col-sm-2 control-label control-label-form">Ad Description</label>
+            <%= f.label :description, class: "col-sm-2 control-label control-label-form" %>
             <div class="col-sm-10">
-              <textarea class="form-control" rows="5"></textarea>
+              <%= f.text_area :description, :class => "form-control", rows: 5, placeholder: "Description - Include more details to help buyers learn more about your ad." %>
             </div>
           </div>
           <!-- Monthly Rent -->
@@ -195,7 +180,11 @@
           </div>
         </div>
         <div class="col-md-6">
+          <div class="form-group">
+            <%= f.submit "Publish Ad", :class => "btn btn-primary" %>
+            <%= link_to "Cancel", :back, :class => "btn btn-default" %>
+          </div>
         </div>
-      </form>
+      <% end %>
   </div>
 </div>

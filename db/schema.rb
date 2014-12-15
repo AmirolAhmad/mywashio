@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215061657) do
+ActiveRecord::Schema.define(version: 20141215075334) do
+
+  create_table "ads", force: true do |t|
+    t.integer  "category_id"
+    t.integer  "type_id"
+    t.integer  "user_id"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
+    t.integer  "size"
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ads", ["category_id"], name: "index_ads_on_category_id", using: :btree
+  add_index "ads", ["type_id"], name: "index_ads_on_type_id", using: :btree
+  add_index "ads", ["user_id"], name: "index_ads_on_user_id", using: :btree
 
   create_table "categories", force: true do |t|
     t.string   "name"
