@@ -15,34 +15,187 @@
             } %>
 <% end %>
 
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>
-    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-  </p>
-  <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>
-    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-  </p>
-  <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>
-    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-  </p>
-  <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>
-    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-  </p>
-  <p><a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a></p>
+<div class="panel panel-black">
+  <div class="panel-heading">
+    <h3 class="panel-title">New Ad</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <form class="form-horizontal" role="form">
+        <div class="col-md-6">
+          <div class="page-header page-header-form">
+            <h3>Type</h3>
+          </div>
+          <!-- Category -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label control-label-form">Category</label>
+            <div class="col-sm-10">
+              <select class="form-control">
+                <option>Apartments</option>
+                <option>Houses</option>
+                <option>Commercial Properties</option>
+                <option>Land</option>
+                <option>Rooms</option>
+                <option>New Properties</option>
+              </select>
+              <label class="radio-inline">
+                <input type="radio" name="forSale" id="forSale" value="sale"> For sale
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="forRent" id="forRent" value="rent"> For rent
+              </label>
+            </div>
+          </div>
+          <!-- Type -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label control-label-form">Type</label>
+            <div class="col-sm-10">
+              <select class="form-control">
+                <option>Condo / Services residence / Penthouse / Townhouse</option>
+                <option>Apartment / Flat</option>
+                <option>Others</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- Bedrooms -->
+              <div class="form-group">
+                <label class="col-sm-4 control-label control-label-form">Bedrooms</label>
+                <div class="col-sm-8">
+                  <select class="form-control">
+                    <option>Bedrooms</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- Bathrooms -->
+              <div class="form-group">
+                <label class="col-sm-4 control-label control-label-form">Bathrooms</label>
+                <div class="col-sm-8">
+                  <select class="form-control">
+                    <option>Bathrooms</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- Size -->
+              <div class="form-group">
+                <label class="col-sm-4 control-label control-label-form">Size</label>
+                <div class="col-sm-8">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Size">
+                    <span class="input-group-addon">sq.ft.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- Furnished -->
+              <div class="form-group">
+                <label class="col-sm-4 control-label control-label-form">Furnished</label>
+                <div class="col-sm-8">
+                  <select class="form-control">
+                    <option>Furnished</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Facilities -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label control-label-form">Facilities</label>
+            <div class="col-sm-10">
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> Swimming Pool
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> Gymnasium
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Tennis Court
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Squash Court
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Mini Market
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Parking Lot
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Playground
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Jogging Track
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> 24 hours Security
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Balcony / Patio
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Cable Internet
+              </label>
+            </div>
+          </div>
+          <!-- Ad Title -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label control-label-form">Ad Title</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ad Title">
+            </div>
+          </div>
+          <!-- Ad Description -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label control-label-form">Ad Description</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" rows="5"></textarea>
+            </div>
+          </div>
+          <!-- Monthly Rent -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label control-label-form">Monthly Rent</label>
+            <div class="col-sm-4">
+              <div class="input-group">
+                <span class="input-group-addon">RM</span>
+                <input type="text" class="form-control" placeholder="100">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- Location -->
+              <div class="form-group">
+                <label class="col-sm-4 control-label control-label-form">Location</label>
+                <div class="col-sm-8">
+                  <select class="form-control">
+                    <option>Location</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- Area -->
+              <div class="form-group">
+                <label class="col-sm-4 control-label control-label-form">Area</label>
+                <div class="col-sm-8">
+                  <select class="form-control">
+                    <option>Area</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+      </form>
+  </div>
 </div>

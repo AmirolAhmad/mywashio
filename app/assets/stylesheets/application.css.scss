@@ -243,3 +243,22 @@ input .input-washio {
 	float: right;
 	width: 85%;
 }
+
+.page-header {
+	margin: -10px 0px 20px;
+	color: #9B9B9B;
+}
+
+.control-label-form {
+	text-align: left !important;
+}
+
+.panel-black {
+	border-color: #2F2D2E;
+}
+
+.panel-black > .panel-heading {
+	border-color: #2F2D2E;
+	background-color: #2F2D2E;
+	color: #FFFFFF;
+}
