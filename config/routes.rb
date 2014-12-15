@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resource :account, only: [:show, :edit, :update]
+  resources :ads
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

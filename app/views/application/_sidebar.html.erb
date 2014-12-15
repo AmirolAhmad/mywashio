@@ -3,10 +3,18 @@
 </div>
 <div class="navigation">
 	<div class="new-ad">
-		<button type="button" class="btn btn-primary btn-block">Add New Ad</button>
+		<%= link_to "Add New Ad", new_ad_path, class: "btn btn-primary btn-block" %>
 	</div>
 	<ul class="nav nav-menu">
-		<li><a href="#"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Dashboard</a></li>
-		<li><a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> All my ad</a></li>
+		<li>
+			<%= link_to root_path do %>
+				<span class="glyphicon glyphicon-list" aria-hidden="true"></span> Dashboard
+			<% end %>
+		</li>
+		<li>
+			<%= link_to ads_path do %>
+				<span class="glyphicon glyphicon-file" aria-hidden="true"></span> All my ad
+			<% end %>
+		</li>
 	</ul>
 </div>
