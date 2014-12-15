@@ -25,4 +25,6 @@ class Ad < ActiveRecord::Base
   belongs_to :category
   belongs_to :type
   belongs_to :user
+
+  scope :by_category, -> (category_id) { where(category_id: category_id) }
 end

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resource :account, only: [:show, :edit, :update]
   resources :ads
 
+  get '/:sort/' => 'pages#index', as: 'category_index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

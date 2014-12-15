@@ -15,3 +15,12 @@
             } %>
 <% end %>
 
+<% Category.limit(8).each do |c| %>
+  <li>
+    <%= link_to c.name, category_index_path(sort: c.name), class: '' %>
+  </li>
+<% end %>
+
+<% @ads.each do |ad| %>
+  <%= ad.title %>
+<% end %>
