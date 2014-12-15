@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resource :account, only: [:show, :edit, :update]
-  resources :ads
+  resources :ads, only: [:index, :new, :create]
 
   get '/:sort/' => 'pages#index', as: 'category_index'
   get '/:sort/:id' => 'pages#show', as: 'category_show'
