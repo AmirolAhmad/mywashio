@@ -17,7 +17,7 @@
 
 <% Category.limit(8).each do |c| %>
   <li>
-    <%= link_to c.name, category_index_path(sort: c.name), class: '' %>
+    <%= link_to c.name, category_index_path(sort: c.slug), class: '' %>
   </li>
 <% end %>
 

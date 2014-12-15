@@ -4,6 +4,7 @@ gem 'rails', '4.1.8'
 
 # Active Record
 gem 'mysql2'
+gem 'friendly_id', '~> 5.0.0'
 
 # JSON APIs
 gem 'jbuilder', '~> 2.0'

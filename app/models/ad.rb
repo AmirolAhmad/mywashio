@@ -13,6 +13,7 @@
 #  description :string(255)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  slug        :string(255)
 #
 # Indexes
 #
@@ -22,6 +23,9 @@
 #
 
 class Ad < ActiveRecord::Base
+	extend FriendlyId
+	friendly_id :name, use: [:slugged, :finders, :history]
+	
   belongs_to :category
   belongs_to :type
   belongs_to :user

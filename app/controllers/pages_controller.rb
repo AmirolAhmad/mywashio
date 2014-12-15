@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-  	@category = Category.find_by_name(params[:sort])
+  	@category = Category.find_by_slug(params[:sort])
   	if @category
   		@ads = Ad.by_category(@category.id)
   	else

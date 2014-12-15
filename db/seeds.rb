@@ -6,12 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.find_or_create_by(name: "Apartments")
-Category.find_or_create_by(name: "Houses")
-Category.find_or_create_by(name: "Commercial Properties")
-Category.find_or_create_by(name: "Land")
-Category.find_or_create_by(name: "Rooms")
-Category.find_or_create_by(name: "New Properties")
+Category.find_or_create_by(name: "Apartments", slug: "apartments")
+Category.find_or_create_by(name: "Houses", slug: "houses")
+Category.find_or_create_by(name: "Commercial Properties", slug: "commercial-properties")
+Category.find_or_create_by(name: "Land", slug: "land")
+Category.find_or_create_by(name: "Rooms", slug: "rooms")
+Category.find_or_create_by(name: "New Properties", slug: "new-properties")
 
 Type.find_or_create_by(name: "Condo / Services residence / Penthouse / Townhouse", category_id: 1)
 Type.find_or_create_by(name: "Apartment / Flat", category_id: 1)
